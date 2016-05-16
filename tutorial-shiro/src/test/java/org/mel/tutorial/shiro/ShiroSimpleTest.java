@@ -21,7 +21,7 @@ public class ShiroSimpleTest {
 	public void test() {
 		Subject currentUser = SecurityUtils.getSubject();
 		currentUser.login(new UsernamePasswordToken("privatemiao", "P@ssw0rd"));
-		System.out.println(currentUser.isPermitted("system:100:role:create"));
+		System.out.println(currentUser.isPermitted("system:user:create"));
 		currentUser.logout();
 	}
 
